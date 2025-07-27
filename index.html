@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครงานวิ่ง [Si Satchanalai Mini Marathon 2025]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+        <h1 class="text-center mb-4">สมัครงานวิ่ง [Si Satchanalai Mini Marathon 2025]</h1>
+        <p class="text-center lead">กรุณากรอกข้อมูลให้ครบถ้วนเพื่อเข้าร่วมการแข่งขัน</p>
+
+        <div id="loadingSpinner" class="text-center my-4 d-none">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p>กำลังประมวลผลการสมัคร...</p>
+        </div>
+
+        <form id="registrationForm" class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+                <label for="fullName" class="form-label">ชื่อ-นามสกุลจริง <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="fullName" name="fullName" required>
+                <div class="invalid-feedback">
+                    กรุณากรอกชื่อ-นามสกุลจริง
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="nickname" class="form-label">ชื่อเล่น</label>
+                <input type="text" class="form-control" id="nickname" name="nickname">
+            </div>
+
+            <div class="col-md-4">
+                <label for="gender" class="form-label">เพศ <span class="text-danger">*</span></label>
+                <select class="form-select" id="gender" name="gender" required>
+                    <option value="">เลือกเพศ...</option>
+                    <option value="ชาย">ชาย</option>
+                    <option value="หญิง">หญิง</option>
+                    <option value="อื่นๆ">อื่นๆ</option>
+                </select>
+                <div class="invalid-feedback">
+                    กรุณาเลือกเพศ
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="dob" class="form-label">วันเกิด <span class="text-danger">*</span></label>
+                <input type="date" class="form-control" id="dob" name="dob" required>
+                <div class="invalid-feedback">
+                    กรุณากรอกวันเกิด
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="age" class="form-label">อายุ (ประมาณ) <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="age" name="age" min="1" required>
+                <div class="invalid-feedback">
+                    กรุณากรอกอายุ (ตัวเลขเท่านั้น)
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label for="phone" class="form-label">เบอร์โทรศัพท์ <span class="text-danger">*</span></label>
+                <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" required>
+                <div class="invalid-feedback">
+                    กรุณากรอกเบอร์โทรศัพท์ 10 หลัก
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">อีเมล <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <div class="invalid-feedback">
+                    กรุณากรอกอีเมลที่ถูกต้อง
+                </div>
+            </div>
+
+            <div class="col-12">
+                <label for="idCard" class="form-label">เลขบัตรประชาชน (ไม่บังคับ)</label>
+                <input type="text" class="form-control" id="idCard" name="idCard" pattern="[0-9]{13}">
+                <div class="invalid-feedback">
+                    กรุณากรอกเลขบัตรประชาชน 13 หลัก
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label for="distance" class="form-label">ระยะทางที่สมัคร <span class="text-danger">*</span></label>
+                <select class="form-select" id="distance" name="distance" required>
+                    <option value="">เลือกระยะทาง...</option>
+                    <option value="5K" data-price="500">5 KM (500 บาท)</option>
+                    <option value="10K" data-price="700">10 KM (700 บาท)</option>
+                    <option value="Half Marathon" data-price="900">Half Marathon (900 บาท)</option>
+                </select>
+                <div class="invalid-feedback">
+                    กรุณาเลือกระยะทาง
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="shirtSize" class="form-label">ไซส์เสื้อ <span class="text-danger">*</span></label>
+                <select class="form-select" id="shirtSize" name="shirtSize" required>
+                    <option value="">เลือกไซส์เสื้อ...</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="2XL">2XL</option>
+                    <option value="3XL">3XL</option>
+                </select>
+                <div class="invalid-feedback">
+                    กรุณาเลือกไซส์เสื้อ
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <label for="price" class="form-label">ค่าสมัคร (บาท) <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="price" name="price" readonly required>
+                <div class="invalid-feedback">
+                    ค่าสมัครไม่ถูกต้อง
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label for="emergencyContactName" class="form-label">ชื่อผู้ติดต่อฉุกเฉิน</label>
+                <input type="text" class="form-control" id="emergencyContactName" name="emergencyContactName">
+            </div>
+            <div class="col-md-6">
+                <label for="emergencyContactPhone" class="form-label">เบอร์โทรผู้ติดต่อฉุกเฉิน</label>
+                <input type="tel" class="form-control" id="emergencyContactPhone" name="emergencyContactPhone" pattern="[0-9]{10}">
+                <div class="invalid-feedback">
+                    กรุณากรอกเบอร์โทรศัพท์ 10 หลัก
+                </div>
+            </div>
+
+            <div class="col-12 text-center mt-4">
+                <button class="btn btn-primary btn-lg" type="submit">ส่งใบสมัคร</button>
+            </div>
+        </form>
+
+        <div id="responseMessage" class="mt-4 text-center"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcOdgq2zU9t+pG+NwFA" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

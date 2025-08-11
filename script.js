@@ -1,5 +1,5 @@
 // *** สำคัญ: แทนที่ด้วย Web App URL ของคุณที่ได้จาก Google Apps Script ***
-const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyrqtJFQOyK-6whttps://script.google.com/macros/s/AKfycbyU8BTA03ha80nvrDwn-vV3HVPSkR1sa-huXH7IKp2Hpz40hqVQP-66_zx2FIpi2uuc/exec3FO9CoCsVuKW1KSc6ayoqjW0dcShjwVb0TJO8caTJAWRAWyo-UHaW/exechttps://script.google.com/macros/s/AKfycbyU8BTA03ha80nvrDwn-vV3HVPSkR1sa-huXH7IKp2Hpz40hqVQP-66_zx2FIpi2uuc/exec'; 
+const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxytri08f5N5VKGbIB4WSDQE-u7mwnSEOBmtGn9KbxIDI87Wq2Pr1GNSgrDIsl1SYm6ZQ/exec'; 
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('registrationForm');
@@ -108,4 +108,5 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Fetch error:', error);
         }
     });
+
 });
